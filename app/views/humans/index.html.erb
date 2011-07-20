@@ -1,0 +1,51 @@
+<h1>Listing Humans</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Warrior Type</th>
+    <th>Health</th>
+    <th>Magicka</th>
+    <th>Fatigue</th>
+    <th>Strength</th>
+    <th>Endurance</th>
+    <th>Wisdom</th>
+    <th>Intelligence</th>
+    <th>Speed</th>
+    <th>Agility</th>
+    <th>Defense</th>
+    <th>Has Weapon ?</th>
+    <th>Has Shield?</th>
+    <th>Power ID</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @humans.each do |human| %>
+  <tr>
+    <td><%= human.name %></td>
+    <td><%= human.warriorType %></td>
+    <td><%= human.health %></td>
+    <td><%= human.magicka %></td>
+    <td><%= human.fatigue %></td>
+    <td><%= human.strength %></td>
+    <td><%= human.endurance %></td>
+    <td><%= human.wisdom %></td>
+    <td><%= human.intelligence %></td>
+    <td><%= human.speed %></td>
+    <td><%= human.agility %></td>
+    <td><%= human.defense %></td>
+    <td><%= human.hasWeapon %></td>
+    <td><%= human.hasShield %></td>
+    <td><%= human.powerID %></td>
+    <td><%= link_to 'Show', human %></td>
+    <td><%= link_to 'Edit', edit_human_path(human) %></td>
+    <td><%= link_to 'Destroy', human, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Human', new_human_path %>
