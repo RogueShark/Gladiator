@@ -1,5 +1,9 @@
 Gladiator::Application.routes.draw do
-  resources :humans
+  resources :humans do
+  	member do
+    	get 'fighter'
+  	end
+  end
 
   get "home/index"
 

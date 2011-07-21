@@ -14,19 +14,19 @@ ActiveRecord::Schema.define(:version => 20110720025300) do
 
   create_table "humans", :force => true do |t|
     t.string   "name"
-    t.string   "warriorType"
-    t.integer  "health"
-    t.integer  "magicka"
-    t.integer  "fatigue"
-    t.integer  "strength"
-    t.integer  "endurance"
-    t.integer  "wisdom"
-    t.integer  "intelligence"
-    t.integer  "speed"
-    t.integer  "agility"
-    t.integer  "defense"
-    t.boolean  "hasWeapon"
-    t.boolean  "hasShield"
+    t.string   "warriorType",  :default => "Slave"
+    t.integer  "health",       :default => 30
+    t.integer  "magicka",      :default => 30
+    t.integer  "fatigue",      :default => 30
+    t.integer  "defense",      :default => 30
+    t.integer  "strength",     :default => 3
+    t.integer  "endurance",    :default => 3
+    t.integer  "wisdom",       :default => 3
+    t.integer  "intelligence", :default => 3
+    t.integer  "speed",        :default => 3
+    t.integer  "agility",      :default => 3
+    t.boolean  "hasWeapon",    :default => false
+    t.boolean  "hasShield",    :default => false
     t.integer  "powerID"
     t.datetime "created_at"
     t.datetime "updated_at"

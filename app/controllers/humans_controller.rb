@@ -10,6 +10,18 @@ class HumansController < ApplicationController
     end
   end
 
+
+	# GET /fighter/1
+  # GET /fighter/1.xml
+  def fighter
+    @human = Human.find(params[:id])
+
+    respond_to do |format|
+      format.html # fighter.html.erb
+      format.xml  { render :xml => @human }
+    end
+  end
+
   # GET /humans/1
   # GET /humans/1.xml
   def show
